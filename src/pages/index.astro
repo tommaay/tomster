@@ -1,32 +1,207 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Section from "components/Section.astro";
 ---
 
 <Layout title="Tommy Huynh | Frontend Software Engineer">
   <main>
-    <section
-      id="hero"
-      class="h-screen flex flex-col justify-center items-center text-center p-2"
-    >
-      <h1 class="text-5xl sm:text-6xl mb-3 font-semibold">Hi, I'm Tommy</h1>
-      <h2 class="text-2xl sm:text-3xl mb-5 font-medium">
-        Senior Frontend Software Engineer
+    <Section id="hero">
+      <h1
+        class="text-5xl sm:text-6xl mb-3 font-medium bg-gradient-to-br text-gradient from-primary-1 to-primary-2 via-primary-2"
+      >
+        Hi, I'm Tommy.
+      </h1>
+      <p class="text-2xl sm:text-3xl mb-6 sm:mb-8 font-light">I am a Frontend Software Engineer.</p>
+      <img src="/logo-circle-1.svg" alt="Tomster cartoon logo" class="h-32 w-32 sm:h-64 sm:w-64" />
+    </Section>
+
+    <Section id="about">
+      <p class="text-2xl sm:text-3xl mb-8">
+        A driven and inspired software engineer dedicated to crafting digital solutions that address
+        real-world challenges, all while delivering smooth and meaningful user experiences.
+      </p>
+    </Section>
+
+    <Section id="projects">
+      <div>
+        <h2
+          class="text-5xl sm:text-6xl max-w-2xl bg-gradient-to-br text-gradient from-primary-1 to-primary-2 via-primary-2"
+        >
+          Projects
+        </h2>
+        <p class="text-2xl sm:text-3xl mt-8">Keep scrolling to see some of my projects.</p>
+      </div>
+    </Section>
+
+    <Section id="web3">
+      <h2
+        class="text-4xl sm:text-5xl mb-8 bg-gradient-to-br text-gradient from-primary-1 to-primary-2 via-primary-2 text-[#fcab76]"
+      >
+        Web3 Projects
       </h2>
-      <p class="text-lg sm:text-2xl">
-        I build accessible, interactive and digital experiences for the web.
-      </p>
-      <p class="text-md sm:text-lg mt-10 text-gray-500">
-        This website is currently under construction. Please check back soon!
-        But click below for a link to a recent full stack project I worked on.
-      </p>
+
+      <div class="p-4 sm:p-6 border rounded-lg shadow-sm text-left">
+        <p class="mb-10">
+          This project conists of many Web3 projects built with Solidity smart contracts that are
+          deployed to the Base Goerli testnet. You will need to connect to the Base testnet and have
+          testnet Eth to interact with the application.
+        </p>
+
+        <ul class="flex flex-col items-start gap-4">
+          <li>
+            <strong class="text-lg">TOMS ERC20 Token</strong> - Users can earn TOMS tokens by staking
+            NFTs, which they can mint within the application.
+          </li>
+          <li>
+            <strong class="text-lg">Mint ERC721 NFTs</strong> - Mint and utilize ERC721 NFTs for staking,
+            providing an opportunity to earn TOMS ERC20 tokens.
+          </li>
+          <li>
+            <strong class="text-lg">ERC1155 Art NFTs</strong> - Mint unlimited ERC1155 art NFTs, including
+            a unique membership NFT that can only be minted once per wallet.
+          </li>
+          <li>
+            <strong class="text-lg">Heads or Tails App</strong> - Make selections of 'heads' or 'tails,'
+            and the results are recorded as blockchain events.
+          </li>
+          <li>
+            <strong class="text-lg">Tip and Buy a Coffee</strong> - Users can tip the contract owner
+            with testnet ETH to buy them a virtual coffee.
+          </li>
+          <li>
+            <strong class="text-lg"> Current Mood App</strong> - Users, including the contract owner
+            and connected addresses, can set and display their mood stored on the blockchain.
+          </li>
+          <li>
+            <strong class="text-lg">Message Board</strong> - Post messages to the smart contract, with
+            the messages displayed in the app.
+          </li>
+          <li>
+            <strong class="text-lg">Staking App</strong> - Stake the ERC721 NFTs, minted within the application,
+            to earn TOMS ERC20 tokens over time.
+          </li>
+        </ul>
+      </div>
+      <a
+        href="https://web3-projects-gamma.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-button hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded mt-6"
+      >
+        Vist Web3 Projects
+      </a>
+    </Section>
+    <Section id="convospace">
+      <h2
+        class="text-4xl sm:text-5xl mb-8 bg-gradient-to-br text-gradient from-primary-1 to-primary-2 via-primary-2"
+      >
+        ConvoSpace
+      </h2>
+
+      <div class="p-4 sm:p-6 border rounded-lg shadow-sm text-left">
+        <p class="mb-6">
+          ConvoSpace App, enabling users to create communities and engage in threaded discussions,
+          similar to Reddit.
+        </p>
+
+        <p class="text-lg mb-1 font-bold">Features</p>
+        <ul class="flex flex-col items-start gap-4">
+          <li>User authentication with NextAuth and Google</li>
+          <li>Custom convospace feed for authenticated users</li>
+          <li>Fetching and server state management with React Query</li>
+          <li>Beautiful message post editor</li>
+          <li>Ability to upload images</li>
+          <li>Users are able to comment and reply to posts</li>
+        </ul>
+      </div>
       <a
         href="https://convo-space.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-5 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+        class="mt-5 bg-button hover:bg-opacity-60 text-white font-semibold py-2 px-4 rounded"
       >
-        Convo Space - A community threads application similar to Reddit
+        Visit ConvoSpace app
       </a>
-    </section>
+    </Section>
+
+    <Section id="other-projects">
+      <h2
+        class="text-4xl sm:text-5xl mb-8 bg-gradient-to-br text-gradient from-primary-1 to-primary-2 via-primary-2"
+      >
+        Other Projects I've Built
+      </h2>
+
+      <div class="p-4 sm:p-6 border rounded-lg shadow-sm text-left">
+        <ul class="flex flex-col items-start gap-4">
+          <li>
+            <strong>Top 10 Exchanges App</strong> - Utilizing the CoinGecko API, this app fetches and
+            presents the top 10 exchanges in a tabular format, enriched with metadata. This is a small
+            project but it includes unit tests and end to end tests using Cypress.
+            <a
+              href="https://top-10-exchanges-table.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-500 hover:underline"
+            >
+              Visit app
+            </a>
+          </li>
+          <li>
+            <strong>NFT Gallery App</strong> - This app is designed for NFT enthusiasts, allowing you
+            to effortlessly explore the world of NFTs. You have the power to search by owner address,
+            gaining access to the NFTs associated with that address. Additionally, you can perform searches
+            based on NFT Collection Addresses, unveiling the entire collection of NFTs within.
+            <a
+              href="https://nft-gallery-plum.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-500 hover:underline"
+            >
+              Visit app
+            </a>
+          </li>
+          <li>
+            <strong>Headless Shopify Ecommerce Store</strong> - A modern ecommerce store powered by Shopify's
+            headless architecture, implemented using Next.js and styled with Tailwind CSS. It utilizes
+            Shopify's GraphQL APIs for seamless product management and customization.
+          </li>
+
+          <li>
+            <strong>Miss Me Women's Fashion</strong> - A Shopify ecommerce store selling high quality
+            women's clothing.
+            <a
+              href="https://www.missme.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-500 hover:underline"
+            >
+              Visit store
+            </a>
+          </li>
+          <li>
+            <strong>Pooks Beef Jerkey</strong> - A Shopify ecommerce store for a local beef jerky business.
+            <a
+              href="https://pookssj.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-500 hover:underline"
+            >
+              Visit store
+            </a>
+          </li>
+          <li>
+            <strong>KB Lashes</strong> - A Shopify ecommerce store selling high quality eyelashe products.
+            <a
+              href="https://kblxsh.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-500 hover:underline"
+            >
+              Visit store
+            </a>
+          </li>
+        </ul>
+      </div>
+    </Section>
   </main>
 </Layout>
