@@ -33,13 +33,11 @@ const { title, description, imgUrl, altText, href } = Astro.props;
   }
 
   .project-details {
-    @apply bg-black/70 absolute p-4 text-white backdrop-blur-sm transition-all ease-in-out duration-500;
-
-    left: 120%;
+    @apply bg-black/70 absolute inset-0 opacity-0 p-4 text-white backdrop-blur-sm transition-all ease-in-out duration-500;
   }
 
   .project-details-content {
-    @apply absolute opacity-0 inset-0 p-5 max-w-xl mx-auto flex-col gap-8 flex items-center justify-center text-sm sm:text-base md:text-lg leading-[24px] md:leading-[32px];
+    @apply absolute inset-0 p-5 max-w-xl mx-auto flex-col gap-8 flex items-center justify-center text-sm sm:text-base md:text-lg leading-[24px] md:leading-[32px];
   }
 
   .project-link {
@@ -51,10 +49,6 @@ const { title, description, imgUrl, altText, href } = Astro.props;
   }
 
   .project-card:hover .project-details {
-    @apply inset-0;
-  }
-
-  .project-card:hover .project-details .project-details-content {
-    @apply opacity-100 ease-in-out duration-1000;
+    @apply opacity-100;
   }
 </style>
