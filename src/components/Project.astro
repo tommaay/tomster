@@ -11,14 +11,50 @@ const { title, description, imgUrl, altText, href } = Astro.props;
 ---
 
 <div class="mb-24">
-  <h3 class="uppercase sm:text-xl md:text-2xl tracking-[2px] sm:tracking-[3px] text-base-grey mb-6">
-    {title} - <a
-      href={href}
-      target="_blank"
-      class="tracking-widest text-blue-400 normal-case hover:text-blue-700">Visit app &#8594;</a
-    >
+  <h3
+    class="uppercase text-xl md:text-2xl tracking-[2px] sm:tracking-[3px] text-base-grey text-center md:text-left mb-3 md:mb-6"
+  >
+    {title}
   </h3>
-  <div class="overflow-hidden rounded-md shadow-lg">
+  <div class="project-card">
     <img src={imgUrl} alt={altText} />
+    <div class="project-details">
+      <div class="project-details-content">
+        <slot />
+        <a href={href} target="_blank" class="project-link">Visit &#8594;</a>
+      </div>
+    </div>
   </div>
 </div>
+
+<style>
+  .project-card {
+    @apply overflow-hidden rounded-md shadow-lg relative min-h-[500px] md:min-h-[640px];
+  }
+
+  .project-details {
+    @apply bg-black/70 absolute p-4 text-white backdrop-blur-sm transition-all ease-in-out duration-500;
+
+    left: 120%;
+  }
+
+  .project-details-content {
+    @apply absolute opacity-0 inset-0 p-5 max-w-xl mx-auto flex-col gap-8 flex items-center justify-center text-sm sm:text-base md:text-lg leading-[24px] md:leading-[32px];
+  }
+
+  .project-link {
+    @apply text-blue-400 border bg-white/90 rounded-full px-6 py-1 md:py-2 sm:text-lg md:text-xl hover:bg-blue-400 hover:border-blue-400 hover:text-white underline-offset-4 tracking-[1px] transition-all ease-in-out;
+  }
+
+  img {
+    @apply absolute inset-0 w-full h-full object-cover md:block;
+  }
+
+  .project-card:hover .project-details {
+    @apply inset-0;
+  }
+
+  .project-card:hover .project-details .project-details-content {
+    @apply opacity-100 ease-in-out duration-1000;
+  }
+</style>
