@@ -37,11 +37,11 @@ const { title, description, imgUrl, altText, href } = Astro.props;
   }
 
   .project-details-content {
-    @apply absolute inset-0 p-5 max-w-xl mx-auto flex-col gap-8 flex items-center justify-center text-sm sm:text-base md:text-lg leading-[24px] md:leading-[32px];
+    @apply absolute inset-0 p-5 max-w-xl mx-auto flex-col gap-8 flex justify-center text-sm sm:text-base md:text-lg leading-[24px] md:leading-[32px];
   }
 
   .project-link {
-    @apply text-blue-400 border bg-white/90 rounded-full px-6 py-1 md:py-2 sm:text-lg md:text-xl hover:bg-blue-400 hover:border-blue-400 hover:text-white underline-offset-4 tracking-[1px] transition-all ease-in-out;
+    @apply self-end text-white hover:text-divider sm:text-lg md:text-xl underline underline-offset-8 tracking-[6px] uppercase transition-all ease-in-out;
   }
 
   img {
