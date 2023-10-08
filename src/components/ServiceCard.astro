@@ -1,0 +1,17 @@
+---
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<div
+  class="max-w-xs sm:max-w-sm p-8 bg-white rounded-2xl min-h-[300px] sm:min-h-[380px] text-center"
+>
+  <h3 class="uppercase tracking-[2px] text-xl sm:text-2xl font-semibold mb-2">{title}</h3>
+  <hr class="mx-auto mb-6 border-t-2 rounded-full border-divider" />
+  <p class="tracking-[2px] leading-[24px] sm:leading-[38px] sm:text-base text-xs">
+    <slot />
+  </p>
+</div>

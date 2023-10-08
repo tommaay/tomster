@@ -6,16 +6,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Nunito", "sans-sarif", ...defaultTheme.fontFamily.sans],
-        kanit: ["Kanit", "sans-sarif", ...defaultTheme.fontFamily.sans],
+        sans: ["Nunito sSans", "sans-sarif", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        dark: "#151C3A",
-        base: "#222222",
-        "primary-1": "#f8bf99",
-        "primary-2": "#fcab76",
-        "primary-3": "#f7c29f",
-        button: "#fcab76",
+        "base-grey": "var(--grey-text)",
+        divider: "var(--divider)",
+        "footer-bg": "#F1F1F1",
       },
     },
   },

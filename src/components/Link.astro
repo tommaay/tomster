@@ -1,0 +1,15 @@
+---
+type Props = {
+  href: string;
+  className?: string;
+};
+
+const { href, className } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`hover:underline underline-offset-8 decoration-divider decoration-2 uppercase tracking-[2px] text-xs lg:text-sm ${className}`}
+>
+  <slot />
+</a>
